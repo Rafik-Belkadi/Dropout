@@ -1038,10 +1038,11 @@ a:active {
 
     .top-menu-bloc ul {
         position: relative;
+        width: 100%;
         flex: 5;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 0;
         left: 0;
@@ -1054,19 +1055,18 @@ a:active {
     }
 
     .top-menu-bloc>h2 {
-        flex: 1;
+        width: 20px;
         font-size: 22px;
     }
 
     .top-menu-bloc>h2>span {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .menu-item-wrapper {
         box-sizing: border-box;
         display: flex;
         overflow: hidden;
-        width: 100%;
         height: 14px;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
@@ -1084,10 +1084,18 @@ a:active {
 
     .menu-item {
         color: var(--main-bg-color);
-        font-size: 10px;
-        line-height: 14px;
-        height: 14px;
+        font-size: 3vw;
+        line-height: 3vw;
+        height: 3vw;
         width: 100%;
+    }
+
+    .mobileLi {
+        display: none;
+    }
+
+    .menu-item:hover {
+        transform: none;
     }
 
     /* HOME SEC */
@@ -1095,7 +1103,7 @@ a:active {
     .content-bloc {
         position: relative;
         width: 100vw;
-        margin-top: 10vh;
+        margin-top: 9.5vh;
         height: 90vh;
         background-color: black;
         color: var(--secondary-txt-color);
@@ -1177,19 +1185,19 @@ a:active {
         transition: none;
     }
 
-
-
     .about p {
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
+        padding: 0 10px;
+        font-size: 5vw;
         font-weight: 600;
         font-family: "HelveticaNow", sans-serif;
-        line-height: 20px;
+        line-height: 5vw;
+        display: flex;
+        justify-content: center;
     }
 
     .underline {
         margin-bottom: 20px;
+        width: 100%;
     }
 
     .about ul {
@@ -1231,7 +1239,6 @@ a:active {
     .about-content {
         margin-top: 0;
         width: 100%;
-        font-size: 14px;
         font-weight: lighter;
         box-sizing: border-box;
         overflow: hidden;
@@ -1239,18 +1246,18 @@ a:active {
     }
 
     .my-line-wrapper {
-        height: 24px;
-        line-height: 24px;
+        height: 6vw;
+        line-height: 6.5vw;
         box-sizing: border-box;
         overflow: hidden;
-        font-size: 14px;
+        font-size: 6vw;
     }
 
     .my-line {
         box-sizing: border-box;
         overflow: hidden;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 6vw;
+        line-height: 6.5vw;
 
     }
 

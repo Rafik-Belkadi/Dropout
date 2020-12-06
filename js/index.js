@@ -6,7 +6,7 @@ var maintxtcolor = "#707070";
 var darktxtcolor = "#020202";
 var accentcolor = "#c92200";
 
-
+var state = innerWidth > 768 ? "big" : "small";
 
 
 
@@ -40,58 +40,62 @@ t1.from(".underline ", 1, { width: "0%" })
 
 
 //  UL HOVER ANIMATION
-var hoveredLi = document.getElementsByClassName("menu-item-wrapper");
-for (let index = 0; index < hoveredLi.length; index++) {
-    const element = hoveredLi[index].children[0];
-    element.addEventListener("mouseover", function (e) {
-        let nextEl = element.parentElement.children[1];
-        gsap.to(nextEl, {
-            duration: 0.2,
-            y: "-100%",
-            color: nextEl.textContent == "Algiers" ? accentcolor : "#020202"
+if (state == 'big') {
+    var hoveredLi = document.getElementsByClassName("menu-item-wrapper");
+    for (let index = 0; index < hoveredLi.length; index++) {
+        const element = hoveredLi[index].children[0];
+        element.addEventListener("mouseover", function (e) {
+            let nextEl = element.parentElement.children[1];
+            gsap.to(nextEl, {
+                duration: 0.2,
+                y: "-100%",
+                color: nextEl.textContent == "Algiers" ? accentcolor : "#020202"
+            });
         });
-    });
-}
+    }
 
-for (let index = 0; index < hoveredLi.length; index++) {
-    const element = hoveredLi[index].children[0];;
-    element.addEventListener("mouseout", function (e) {
-        let nextEl = element.parentElement.children[1];
-        gsap.to(nextEl, {
-            duration: 0.2,
-            y: 0,
-            color: "#707070"
+    for (let index = 0; index < hoveredLi.length; index++) {
+        const element = hoveredLi[index].children[0];;
+        element.addEventListener("mouseout", function (e) {
+            let nextEl = element.parentElement.children[1];
+            gsap.to(nextEl, {
+                duration: 0.2,
+                y: 0,
+                color: "#707070"
+            });
         });
-    });
-}
+    }
 
+}
 
 
 const shoutUs = document.getElementById("shoutWrapper");
-shoutUs.addEventListener("mouseover", () => {
-    const element = document.getElementById("shoutUs");
-    gsap.to(element, {
-        duration: 0.2,
-        cursor: "none",
-        width: "70%",
-        backgroundColor: mainbgcolor,
-        color: darktxtcolor,
-        ease: Power4.easeOut
+if (state == 'big') {
+    shoutUs.addEventListener("mouseover", () => {
+        const element = document.getElementById("shoutUs");
+        gsap.to(element, {
+            duration: 0.2,
+            cursor: "none",
+            width: "70%",
+            backgroundColor: mainbgcolor,
+            color: darktxtcolor,
+            ease: Power4.easeOut
 
+        })
     })
-})
-shoutUs.addEventListener("mouseout", () => {
-    const element = document.getElementById("shoutUs");
-    gsap.to(element, {
-        duration: 0.2,
-        cursor: "none",
-        width: "100%",
-        backgroundColor: accentcolor,
-        color: secondarytxtcolor,
-        ease: Power4.easeOut
+    shoutUs.addEventListener("mouseout", () => {
+        const element = document.getElementById("shoutUs");
+        gsap.to(element, {
+            duration: 0.2,
+            cursor: "none",
+            width: "100%",
+            backgroundColor: accentcolor,
+            color: secondarytxtcolor,
+            ease: Power4.easeOut
+        })
     })
-})
 
+}
 
 //  END LANDING PAGE ANIMATIONS
 // -------------------------------------------------
@@ -253,7 +257,7 @@ h.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    h.parentElement.children[0].classList.add("selected");
+    h.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 });
 var a = document.getElementById("about-li");
 a.addEventListener("click", function () {
@@ -261,7 +265,7 @@ a.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    a.parentElement.children[0].classList.add("selected");
+    a.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 
 });
 var c = document.getElementById("cando-li");
@@ -270,7 +274,7 @@ c.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    c.parentElement.children[0].classList.add("selected");
+    c.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 
 });
 var cz = document.getElementById("projects-li");
@@ -279,7 +283,7 @@ cz.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    cz.parentElement.children[0].classList.add("selected");
+    cz.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 
 });
 var cd = document.getElementById("contact-li");
@@ -288,7 +292,7 @@ cd.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    cd.parentElement.children[0].classList.add("selected");
+    cd.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 
 });
 
@@ -299,5 +303,5 @@ back.addEventListener("click", function () {
         behavior: 'smooth'
     });
     $('.selected').removeClass("selected");
-    h.parentElement.children[0].classList.add("selected");
+    h.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 });

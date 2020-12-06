@@ -6,6 +6,8 @@ var maintxtcolor = "#5465FF";
 var darktxtcolor = "#FFFFFF";
 var accentcolor = "#5465FF";
 
+var state = innerWidth > 768 ? "big" : "small";
+
 // SMOOTH SCROLL ANIMATION
 // ------------------------------------------------------
 
@@ -45,57 +47,61 @@ t1.from(".underline ", 1, { width: "0%" })
 
 
 //  UL HOVER ANIMATION
-var hoveredLi = document.getElementsByClassName("menu-item-wrapper");
-for (let index = 0; index < hoveredLi.length; index++) {
-    const element = hoveredLi[index].children[0];
-    element.addEventListener("mouseover", function (e) {
-        let nextEl = element.parentElement.children[1];
-        gsap.to(nextEl, {
-            duration: 0.2,
-            y: "-100%",
-            color: nextEl.textContent == "Algiers" ? accentcolor : darktxtcolor
+if (state == 'big') {
+    var hoveredLi = document.getElementsByClassName("menu-item-wrapper");
+    for (let index = 0; index < hoveredLi.length; index++) {
+        const element = hoveredLi[index].children[0];
+        element.addEventListener("mouseover", function (e) {
+            let nextEl = element.parentElement.children[1];
+            gsap.to(nextEl, {
+                duration: 0.2,
+                y: "-100%",
+                color: nextEl.textContent == "Algiers" ? accentcolor : darktxtcolor
+            });
         });
-    });
+    }
+
+    for (let index = 0; index < hoveredLi.length; index++) {
+        const element = hoveredLi[index].children[0];;
+        element.addEventListener("mouseout", function (e) {
+            let nextEl = element.parentElement.children[1];
+            gsap.to(nextEl, {
+                duration: 0.2,
+                y: 0,
+                color: "#707070"
+            });
+        });
+    }
 }
 
-for (let index = 0; index < hoveredLi.length; index++) {
-    const element = hoveredLi[index].children[0];;
-    element.addEventListener("mouseout", function (e) {
-        let nextEl = element.parentElement.children[1];
-        gsap.to(nextEl, {
+
+
+if (state == 'big') {
+    const shoutUs = document.getElementById("shoutWrapper");
+    shoutUs.addEventListener("mouseover", () => {
+        const element = document.getElementById("shoutUs");
+        gsap.to(element, {
             duration: 0.2,
-            y: 0,
-            color: "#707070"
-        });
-    });
+            cursor: "none",
+            width: "70%",
+            backgroundColor: mainbgcolor,
+            color: darktxtcolor,
+            ease: Power4.easeOut
+
+        })
+    })
+    shoutUs.addEventListener("mouseout", () => {
+        const element = document.getElementById("shoutUs");
+        gsap.to(element, {
+            duration: 0.2,
+            cursor: "none",
+            width: "100%",
+            backgroundColor: accentcolor,
+            color: secondarytxtcolor,
+            ease: Power4.easeOut
+        })
+    })
 }
-
-
-
-const shoutUs = document.getElementById("shoutWrapper");
-shoutUs.addEventListener("mouseover", () => {
-    const element = document.getElementById("shoutUs");
-    gsap.to(element, {
-        duration: 0.2,
-        cursor: "none",
-        width: "70%",
-        backgroundColor: mainbgcolor,
-        color: darktxtcolor,
-        ease: Power4.easeOut
-
-    })
-})
-shoutUs.addEventListener("mouseout", () => {
-    const element = document.getElementById("shoutUs");
-    gsap.to(element, {
-        duration: 0.2,
-        cursor: "none",
-        width: "100%",
-        backgroundColor: accentcolor,
-        color: secondarytxtcolor,
-        ease: Power4.easeOut
-    })
-})
 
 
 //  END LANDING PAGE ANIMATIONS
