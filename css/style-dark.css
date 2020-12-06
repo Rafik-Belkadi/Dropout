@@ -1137,8 +1137,8 @@ p {
     .content-bloc {
         position: relative;
         width: 100vw;
-        margin-top: 9.5vh;
-        height: 90vh;
+        margin-top: 5vh;
+        height: 95vh;
         background-color: black;
         color: var(--secondary-txt-color);
         animation: none;
@@ -1238,6 +1238,10 @@ p {
 
     .about ul {
         display: none;
+    }
+
+    .location {
+        margin-top: 20px
     }
 
     /* ------------------------------------------------------- */
