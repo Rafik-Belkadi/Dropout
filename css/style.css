@@ -1103,8 +1103,7 @@ a:active {
     .content-bloc {
         position: relative;
         width: 100vw;
-        margin-top: 5vh;
-        height: 95vh;
+        height: 100vh;
         background-color: black;
         color: var(--secondary-txt-color);
         animation: none;
@@ -1204,7 +1203,7 @@ a:active {
         display: none;
     }
     .location {
-        margin-top: 20px
+        margin-top: 50px
     }
 
     /* ------------------------------------------------------- */
