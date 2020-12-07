@@ -1202,6 +1202,7 @@ a:active {
     .about ul {
         display: none;
     }
+
     .location {
         margin-top: 50px
     }
@@ -1213,7 +1214,7 @@ a:active {
     #about {
         overflow: hidden;
         position: absolute;
-        top: 100vh;
+        top: 105vh;
         right: 0;
         width: 100vw;
         height: 100vh;
