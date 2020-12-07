@@ -1159,7 +1159,7 @@ a:active {
         display: flex;
         flex-direction: column-reverse;
         justify-items: start;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-start;
 
     }
