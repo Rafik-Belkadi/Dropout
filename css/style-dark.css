@@ -1217,7 +1217,9 @@ p {
         color: var(--secondary-txt-color);
         transition: none;
     }
-
+    .shout-us h6 {
+        margin-bottom: 20px;
+    }
 
 
     .about p {
@@ -1250,7 +1252,7 @@ p {
     #about {
         overflow: hidden;
         position: absolute;
-        top: 105vh;
+        top: 100vh;
         right: 0;
         width: 100vw;
         height: 100vh;

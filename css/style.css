@@ -1184,6 +1184,10 @@ a:active {
         transition: none;
     }
 
+    .shout-us h6 {
+        margin-bottom: 20px;
+    }
+
     .about p {
         padding: 0 10px;
         font-size: 5vw;
