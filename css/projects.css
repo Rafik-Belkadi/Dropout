@@ -362,13 +362,13 @@ a:active {
     .text-content {
         font-size: 3vw;
         line-height: 3.1vw;
-        width: 60vw;
+        width: 70vw;
         height: 100%;
         color: var(--main-bg-color);
     }
 
     .my-line-wrapper {
-        height: 5.1vw;
+        height: 6vw;
         line-height: 5.1vw;
         box-sizing: border-box;
         overflow: hidden;
@@ -376,10 +376,11 @@ a:active {
     }
 
     .my-line {
+        height: 100%;
         box-sizing: border-box;
         overflow: hidden;
         font-size: 5vw;
-        line-height: 5.1vw;
+        line-height: 6vw;
 
     }
 
@@ -404,8 +405,8 @@ a:active {
     #maindiv {
         overflow: hidden;
         position: absolute;
-        top: 90vh;
-        right: 0;
+        top : 100vh;
+        right: -55vw;
         width: 500px;
         /* transform: rotate(45deg); */
         white-space: nowrap;

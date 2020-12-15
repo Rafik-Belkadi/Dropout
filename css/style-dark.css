@@ -654,11 +654,11 @@ p {
 #projects span {
     position: relative;
     display: block;
-    margin-right: 20px;
+    margin-right: 2vw;
 }
 
 .desc {
-    font-size: 24px;
+    font-size: 1vw;
     color: var(--accent-color);
     margin: 0;
 }
@@ -1452,6 +1452,18 @@ p {
     #projects a {
         font-size: 18px;
 
+    }
+
+    #projects span {
+        position: relative;
+        display: block;
+        font-size: 4vw;
+    }
+
+    .desc {
+        font-size: 3vw;
+        color: var(--accent-color);
+        margin: 0;
     }
 
 

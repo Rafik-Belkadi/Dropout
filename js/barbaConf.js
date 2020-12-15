@@ -531,7 +531,7 @@ const animateHomeLight = () => {
 
     $(".navigation-link-3").hover(function () {
         $(".project-preview").css({
-            "background-image": "url(assets/banxy.png)"
+            "background-image": "url(assets/banxy.jpg)"
         });
     });
     $(".navigation-link-4").hover(function () {

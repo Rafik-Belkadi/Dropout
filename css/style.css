@@ -613,7 +613,6 @@ a:active {
 #projects a {
     font-family: "HelveticaNow";
     font-weight: bold;
-    font-size: 48px;
     text-decoration: none;
     color: rgb(0, 0, 0);
     display: flex;
@@ -624,10 +623,11 @@ a:active {
 #projects span {
     position: relative;
     display: block;
+    font-size: 2vw;
 }
 
 .desc {
-    font-size: 24px;
+    font-size: 1vw;
     color: var(--accent-color);
     margin: 0;
 }
@@ -1424,6 +1424,17 @@ p {
 
     }
 
+    #projects span {
+        position: relative;
+        display: block;
+        font-size: 4vw;
+    }
+
+    .desc {
+        font-size: 3vw;
+        color: var(--accent-color);
+        margin: 0;
+    }
 
     /* ------------------------------------------------------- */
     /* CONTACT SECTION */
@@ -1454,8 +1465,8 @@ p {
 
     .bubble-wrapper {
         align-self: center;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         margin-left: 0px;
         margin-top: 0px;
         box-sizing: border-box;
