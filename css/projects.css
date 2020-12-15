@@ -388,7 +388,7 @@ a:active {
 
     .contact-us {
         position: absolute;
-        bottom: 3vh;
+        bottom: 20px;
         right: 2vh;
         width: 30vw;
         height: 30vw;
