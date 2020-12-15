@@ -265,6 +265,7 @@ const animatePerf = () => {
     var currentLink = document.URL.split('/')[3]
     if (currentLink == 'Radio.html') {
         document.documentElement.style.setProperty('--accent-color', '#FF2A6D');
+        gsap.set('html,body', { backgroundColor: '#FFFFFF' })
 
         var myAnimation = new hoverEffect({
             parent: document.querySelector('.image-container'),
@@ -291,6 +292,7 @@ const animatePerf = () => {
             displacementImage: '../assets/fluid.jpg'
         });
     } else {
+        document.documentElement.style.setProperty('--accent-color', '#FFC400;');
         var myAnimation = new hoverEffect({
             parent: document.querySelector('.image-container'),
             image1: '../assets/projects/perf.jpg',
@@ -298,7 +300,6 @@ const animatePerf = () => {
             displacementImage: '../assets/fluid.jpg'
         });
     }
-
 
     $("i").on("mouseenter", function () {
         cursor.addClass("active");
@@ -382,7 +383,8 @@ const animateHomeLight = () => {
 
     gsap.set(".mainsec", { height: "100%", overflow: "hidden", position: "static" });
 
-
+    let current = new Date();
+    document.getElementById("current-time").innerText = current.toUTCString();
 
 
     const shoutUs = document.getElementById("shoutWrapper");

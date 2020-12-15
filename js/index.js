@@ -321,7 +321,7 @@ $(document).ready(function () {
         width: 0
     });
     $(document)
-        .on("mouseover", ".navigation-item span", function (evt) {
+        .on("mouseenter", ".navigation-item span", function (evt) {
 
             gsap.to($(".project-preview"), {
                 duration: 1,
@@ -329,7 +329,7 @@ $(document).ready(function () {
                 ease: Expo.easeInOut
             });
         })
-        .on("mouseout", ".navigation-item span", function (evt) {
+        .on("mouseleave", ".navigation-item span", function (evt) {
 
             gsap.to($(".project-preview"), {
                 duration: 0.5,
