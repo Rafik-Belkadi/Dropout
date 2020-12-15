@@ -342,7 +342,7 @@ a:active {
     }
 
     .story {
-        
+
         width: fit-content;
         left: 0;
         top: -30px;
@@ -439,4 +439,33 @@ a:active {
         font-size: 8vw;
     }
 
+    .contact-banxy {
+        background: linear-gradient(#0097AD 0%, #681F7A 100%);
+        color: white;
+    }
+
+    .contact-us:hover {
+        cursor: none;
+        background: #FFFFFF;
+    }
+
+    .contact-banxy:hover {
+        cursor: none;
+        background: black;
+        color: white;
+    }
+
+    .contact-radio {
+        cursor: none;
+        background: var(--accent-color);
+    }
+
+    .contact-radio:hover {
+        cursor: none;
+        background: var(--secondary-bg-color);
+    }
+
+    .banxy-text {
+        color: var(--secondary-bg-color)
+    }
 }
