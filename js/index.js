@@ -40,9 +40,19 @@ TweenMax.to({}, 0.016, {
     }
 });
 
+var divRect = document.getElementsByClassName('projects')[0].getBoundingClientRect();
 $(document).on("mousemove", function (e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
+    if (e.clientX >= divRect.left && e.clientX <= divRect.right &&
+        e.clientY >= divRect.top && e.clientY <= divRect.bottom) {
+    } else {
+        gsap.to($(".project-preview"), {
+            duration: 0,
+            width: 0,
+            ease: Expo.easeInOut
+        })
+    }
 });
 
 
@@ -324,7 +334,7 @@ $(document).ready(function () {
         .on("mouseenter", ".navigation-item span", function (evt) {
 
             gsap.to($(".project-preview"), {
-                duration: 1,
+                duration: 0.5,
                 width: "600px",
                 ease: Expo.easeInOut
             });
@@ -332,12 +342,13 @@ $(document).ready(function () {
         .on("mouseleave", ".navigation-item span", function (evt) {
 
             gsap.to($(".project-preview"), {
-                duration: 0.5,
+                duration: 0,
                 width: 0,
                 ease: Expo.easeInOut
             })
         });
 });
+
 
 
 $(".navigation-link-1").hover(function () {

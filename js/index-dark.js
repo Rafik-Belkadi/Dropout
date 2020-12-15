@@ -41,11 +41,20 @@ TweenMax.to({}, 0.016, {
     }
 });
 
+var divRect = document.getElementsByClassName('projects')[0].getBoundingClientRect();
 $(document).on("mousemove", function (e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
+    if (e.clientX >= divRect.left && e.clientX <= divRect.right &&
+        e.clientY >= divRect.top && e.clientY <= divRect.bottom) {
+    } else {
+        gsap.to($(".project-preview"), {
+            duration: 0,
+            width: 0,
+            ease: Expo.easeInOut
+        })
+    }
 });
-
 
 
 gsap.set(".mainsec", { height: "0%", overflow: "hidden", position: "absolute" });
