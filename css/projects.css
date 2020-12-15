@@ -342,9 +342,10 @@ a:active {
     }
 
     .story {
-        height: 60vh;
+        
         width: fit-content;
         left: 0;
+        top: -30px;
         display: grid;
     }
 
