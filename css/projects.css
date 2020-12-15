@@ -55,6 +55,13 @@ body {
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
 .cursor {
     position: absolute;
     width: 20px;
@@ -317,12 +324,6 @@ a:active {
 
 @media (max-width: 990px) {
 
-    *,
-    body,
-    html {
-        overflow: hidden;
-    }
-
     .cursor {
         display: none;
     }
@@ -405,7 +406,7 @@ a:active {
 
     #maindiv {
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         top: 100vh;
         right: -55vw;
         width: 500px;
