@@ -1,0 +1,24 @@
+.loading-screen-xd {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: #000000;
+    background-image: url("../assets/future.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 0%;
+    height: 100%;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 28;
+    pointer-events: none;
+}

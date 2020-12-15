@@ -28,6 +28,8 @@
     --main-txt-color: #707070;
     --dark-txt-color: #020202;
     --accent-color: #c92200;
+    --perf-color: #FFC400;
+
     --main-padding: 15px;
 }
 
@@ -53,6 +55,7 @@ body {
     margin: 0;
 }
 
+
 .replacement {
     width: 35vw;
     padding: 15px 0 0 15px;
@@ -63,8 +66,8 @@ body {
 
 .cursor {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 100%;
     background: var(--main-txt-color);
     z-index: 3;
@@ -74,8 +77,8 @@ body {
 
 .cursor-follower {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     background: var(--accent-color);
     z-index: 2;
@@ -127,6 +130,7 @@ a:active {
 }
 
 #switch-mood:hover {
+    cursor: none;
     background-color: var(--secondary-bg-color);
     color: var(--secondary-accent-color);
 }
@@ -347,7 +351,7 @@ a:active {
     color: var(--secondary-txt-color);
     font-weight: bold;
     font-size: 1rem;
-    animation: 1.5s ease-in 4.5s slideInFromLeft;
+    animation: 1.5s ease-in 4 slideInFromLeft;
     cursor: none;
 }
 
@@ -612,12 +616,24 @@ a:active {
     font-size: 48px;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 #projects span {
     position: relative;
     display: block;
-    margin-right: 20px;
+}
+
+.desc {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .span-1:before {
@@ -665,6 +681,7 @@ a:active {
     direction: rtl;
     z-index: 6;
     justify-content: center;
+
 }
 
 .project-preview {
@@ -677,6 +694,8 @@ a:active {
     background: url(../assets/background.jpg) no-repeat 50% 50%;
     background-size: cover;
     overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px grey;
 }
 
 #projects .navigation-link {
@@ -727,6 +746,7 @@ a:active {
 
 .bubble-wrapper {
     width: 40vw;
+    height: 42vh;
     box-sizing: border-box;
     overflow: hidden;
     cursor: none;
@@ -746,6 +766,12 @@ a:active {
     font-size: 20px;
     display: grid;
     place-items: center;
+    transition: all ease-in-out 0.3s;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.contact-bubble:hover {
+    background-color: #161616;
 }
 
 .footer {
@@ -769,6 +795,14 @@ a:active {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: normal;
+}
+
+.footer ul a {
+    cursor: none
+}
+
+.footer ul a:hover {
+    cursor: none
 }
 
 .footer ul li {
@@ -802,7 +836,9 @@ a:active {
 }
 
 
-
+#callus {
+    font-weight: bold;
+}
 
 
 
@@ -1512,4 +1548,11 @@ a:active {
     to {
         transform: scale(1.0)
     }
+}
+
+.notransition {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    animation: none !important;
 }

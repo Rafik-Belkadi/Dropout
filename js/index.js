@@ -1,3 +1,4 @@
+
 var mainbgcolor = "#e0e0e0";
 var secondarybgcolor = "#191516";
 var secondaryaccentcolor = "#5465FF";
@@ -7,6 +8,42 @@ var darktxtcolor = "#020202";
 var accentcolor = "#c92200";
 
 var state = innerWidth > 768 ? "big" : "small";
+
+
+var cursor = $(".cursor"),
+    follower = $(".cursor-follower");
+
+var posX = 0,
+    posY = 0,
+    mouseX = 0,
+    mouseY = 0;
+
+TweenMax.to({}, 0.016, {
+    repeat: -1,
+    onRepeat: function () {
+        posX += (mouseX - posX) / 9;
+        posY += (mouseY - posY) / 9;
+
+        TweenMax.set(follower, {
+            css: {
+                left: posX - 20,
+                top: posY - 20
+            }
+        });
+
+        TweenMax.set(cursor, {
+            css: {
+                left: mouseX,
+                top: mouseY
+            }
+        });
+    }
+});
+
+$(document).on("mousemove", function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
 
 
 
@@ -33,7 +70,7 @@ gsap.from(".top-menu-bloc h2", { duration: 2, opacity: 0, x: "-100%", ease: "bac
 var t1 = new TimelineMax();
 
 t1.delay(mydealy)
-t1.from(".shout-us p", 1, { opacity: 0 })
+t1.from(".shout-us h6", 1, { opacity: 0 })
 t1.staggerFrom(".top-content-bloc p,.top-content-bloc h1, .about p, .about ul", 1.5, { opacity: 0, y: "100%" }, .02);
 t1.from(".underline ", 1, { width: "0%" })
 
@@ -108,7 +145,6 @@ gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(CSSRulePlugin);
 var aboutContent = document.querySelector(".about-content");
 var results = Splitting({ target: aboutContent, by: "lines" });
-console.log(results);
 document.getElementsByClassName("about-content")[0].innerHTML = "";
 for (let index = 0; index < results[0].lines.length; index++) {
     var myLine = document.createElement("div");
@@ -212,40 +248,6 @@ gsap.from("#contact .footer", 2, {
 // -------------------------------------------------
 
 
-var cursor = $(".cursor"),
-    follower = $(".cursor-follower");
-
-var posX = 0,
-    posY = 0,
-    mouseX = 0,
-    mouseY = 0;
-
-TweenMax.to({}, 0.016, {
-    repeat: -1,
-    onRepeat: function () {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
-
-        TweenMax.set(follower, {
-            css: {
-                left: posX - 20,
-                top: posY - 20
-            }
-        });
-
-        TweenMax.set(cursor, {
-            css: {
-                left: mouseX,
-                top: mouseY
-            }
-        });
-    }
-});
-
-$(document).on("mousemove", function (e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-});
 
 
 
@@ -305,3 +307,62 @@ back.addEventListener("click", function () {
     $('.selected').removeClass("selected");
     h.parentElement.children[state == 'big' ? 0 : 1].classList.add("selected");
 });
+
+
+var myAnimation1 = new hoverEffect({
+    parent: document.querySelector('.bottom-menu-bloc'),
+    image1: 'assets/background2.jpg',
+    image2: 'assets/future.png',
+    displacementImage: 'assets/fluid.jpg'
+});
+
+$(document).ready(function () {
+    TweenMax.set(".project-preview", {
+        width: 0
+    });
+    $(document)
+        .on("mouseover", ".navigation-item span", function (evt) {
+
+            gsap.to($(".project-preview"), {
+                duration: 1,
+                width: "600px",
+                ease: Expo.easeInOut
+            });
+        })
+        .on("mouseout", ".navigation-item span", function (evt) {
+
+            gsap.to($(".project-preview"), {
+                duration: 0.5,
+                width: 0,
+                ease: Expo.easeInOut
+            })
+        });
+});
+
+
+$(".navigation-link-1").hover(function () {
+    $(".project-preview").css({
+        "background-image": "url(assets/Perf.jpg)"
+    });
+});
+
+$(".navigation-link-2").hover(function () {
+    $(".project-preview").css({
+        "background-image": "url(assets/radio.jpg)"
+    });
+});
+
+$(".navigation-link-3").hover(function () {
+    $(".project-preview").css({
+        "background-image": "url(assets/banxy.png)"
+    });
+});
+
+$(".navigation-link-4").hover(function () {
+    $(".project-preview").css({
+        "background-image": "url(assets/sgs.PNG)"
+    });
+});
+
+
+

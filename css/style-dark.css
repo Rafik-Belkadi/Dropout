@@ -74,8 +74,8 @@ body {
 
 .cursor {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 100%;
     background: var(--secondary-txt-color);
     z-index: 3;
@@ -85,8 +85,8 @@ body {
 
 .cursor-follower {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
     background: var(--accent-color);
     z-index: 2;
@@ -138,6 +138,7 @@ a:active {
 }
 
 #switch-mood:hover {
+    cursor: none;
     background-color: var(--secondary-bg-color);
     color: var(--secondary-accent-color);
 }
@@ -598,6 +599,7 @@ p {
     width: 100%;
 }
 
+
 .projects {
     margin-top: 50px;
     width: 100%;
@@ -643,13 +645,26 @@ p {
     font-weight: bold;
     font-size: 48px;
     text-decoration: none;
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 #projects span {
     position: relative;
     display: block;
     margin-right: 20px;
+}
+
+.desc {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .span-1:before {
@@ -778,6 +793,12 @@ p {
     font-size: 20px;
     display: grid;
     place-items: center;
+    transition: all ease-in-out 0.3s;
+}
+
+.contact-bubble:hover {
+    background-color: #FFFFFF;
+    color: #161616;
 }
 
 .footer {
@@ -802,6 +823,14 @@ p {
     text-transform: uppercase;
     font-weight: normal;
     color: var(--main-bg-color);
+}
+
+.footer ul a {
+    cursor: none
+}
+
+.footer ul a:hover {
+    cursor: none
 }
 
 .footer ul li {
@@ -1217,6 +1246,7 @@ p {
         color: var(--secondary-txt-color);
         transition: none;
     }
+
     .shout-us h6 {
         margin-bottom: 20px;
     }
