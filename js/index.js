@@ -360,7 +360,7 @@ $(".navigation-link-3").hover(function () {
 
 $(".navigation-link-4").hover(function () {
     $(".project-preview").css({
-        "background-image": "url(assets/sgs.PNG)"
+        "background-image": "url(assets/sgs.jpg)"
     });
 });
 

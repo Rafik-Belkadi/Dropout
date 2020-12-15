@@ -287,7 +287,7 @@ const animatePerf = () => {
         var myAnimation = new hoverEffect({
             parent: document.querySelector('.image-container'),
             image1: '../assets/future.png',
-            image2: '../assets/sgs.png',
+            image2: '../assets/sgs.jpg',
             displacementImage: '../assets/fluid.jpg'
         });
     } else {
@@ -536,7 +536,7 @@ const animateHomeLight = () => {
     });
     $(".navigation-link-4").hover(function () {
         $(".project-preview").css({
-            "background-image": "url(assets/sgs.PNG)"
+            "background-image": "url(assets/sgs.jpg)"
         });
 
     });
