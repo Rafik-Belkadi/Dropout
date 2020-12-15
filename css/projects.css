@@ -371,8 +371,7 @@ a:active {
     }
 
     .my-line-wrapper {
-        height: 6vw;
-        line-height: 5.1vw;
+        height: 8.4vw;
         box-sizing: border-box;
         overflow: hidden;
         font-size: 20px;
@@ -382,8 +381,8 @@ a:active {
         height: 100%;
         box-sizing: border-box;
         overflow: hidden;
-        font-size: 5vw;
-        line-height: 6vw;
+        font-size: 4vw;
+        line-height: 4.2vw;
 
     }
 
@@ -437,6 +436,7 @@ a:active {
         top: 5vh;
         left: 2vh;
         font-size: 8vw;
+        color: var(--accent-color);
     }
 
     .contact-banxy {
@@ -468,11 +468,11 @@ a:active {
     .banxy-text {
         color: var(--secondary-bg-color)
     }
-
     .gradient {
         background: linear-gradient(90deg, #0097AD 0%, #681F7A 50%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    
 }
