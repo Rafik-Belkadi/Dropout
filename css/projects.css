@@ -468,4 +468,11 @@ a:active {
     .banxy-text {
         color: var(--secondary-bg-color)
     }
+
+    .gradient {
+        background: linear-gradient(90deg, #0097AD 0%, #681F7A 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
