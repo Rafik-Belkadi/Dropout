@@ -243,6 +243,7 @@ a:active {
 
 .gradient {
     background: linear-gradient(90deg, #0097AD 0%, #681F7A 50%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -405,7 +406,7 @@ a:active {
     #maindiv {
         overflow: hidden;
         position: absolute;
-        top : 100vh;
+        top: 100vh;
         right: -55vw;
         width: 500px;
         /* transform: rotate(45deg); */
