@@ -237,7 +237,6 @@ a:active {
     transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     transition: transform ease-in-out 0.3s;
-    animation-delay: 1s;
     line-height: 25px;
     height: 25px;
     width: 100%;
@@ -1016,6 +1015,10 @@ p {
 }
 
 @media (max-width: 990px) {
+    #switch-mood {
+        width: 50vw;
+        font-size: 4vw;
+    }
 
     /* width */
     ::-webkit-scrollbar {
@@ -1289,18 +1292,18 @@ p {
     }
 
     .my-line-wrapper {
-        height: 6vw;
-        line-height: 6.5vw;
+        height: 6.5vw;
+        line-height: 6vw;
         box-sizing: border-box;
         overflow: hidden;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     .my-line {
         box-sizing: border-box;
         overflow: hidden;
-        font-size: 6vw;
-        line-height: 6.5vw;
+        font-size: 4.5vw;
+        line-height: 6vw;
 
     }
 

@@ -113,7 +113,9 @@ $(function () {
                     const done = this.async();
                     pageTransitionStart()
                     destroyCss('indexCss')
-                    destroyCss('bottomToDestroy')
+                    destroyCss('mainsec')
+                    destroyCss('switch-mood')
+
                     loadCss("css/projects.css", "perfCss")
                     await delay(1000);
                     done();
@@ -133,7 +135,9 @@ $(function () {
                     const done = this.async();
                     pageTransitionStart()
                     destroyCss('indexCss')
-                    destroyCss('bottomToDestroy')
+                    destroyCss('mainsec')
+                    destroyCss('switch-mood')
+
                     loadCss("css/projects.css", "perfCss")
                     await delay(1000);
                     done();
@@ -153,7 +157,8 @@ $(function () {
                     const done = this.async();
                     pageTransitionStart()
                     destroyCss('indexCss')
-                    destroyCss('bottomToDestroy')
+                    destroyCss('mainsec')
+                    destroyCss('switch-mood')
                     loadCss("css/projects.css", "perfCss")
                     await delay(1000);
                     done();
@@ -173,7 +178,8 @@ $(function () {
                     const done = this.async();
                     pageTransitionStart()
                     destroyCss('indexCss')
-                    destroyCss('bottomToDestroy')
+                    destroyCss('mainsec')
+                    destroyCss('switch-mood')
                     loadCss("css/projects.css", "perfCss")
                     await delay(1000);
                     done();
@@ -192,6 +198,7 @@ $(function () {
 
 const animatePerf = () => {
     $('#maindiv').width('800px');
+    document.documentElement.style.removeProperty('--accent-color')
 
     var cursor = $(".cursor"),
         follower = $(".cursor-follower");
@@ -292,6 +299,7 @@ const animatePerf = () => {
             displacementImage: '../assets/fluid.jpg'
         });
     } else {
+        gsap.set('html,body', { backgroundColor: '#0A0000' })
         document.documentElement.style.setProperty('--accent-color', '#FFC400;');
         var myAnimation = new hoverEffect({
             parent: document.querySelector('.image-container'),
