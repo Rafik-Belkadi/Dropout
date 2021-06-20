@@ -21,7 +21,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 :root {
-    --main-bg-color: #e0e0e0;
+    --main-bg-color: #FFFFFF;
     --secondary-bg-color: #191516;
     --secondary-accent-color: #5465FF;
     --secondary-txt-color: #FFFFFF;
@@ -615,7 +615,7 @@ h4 {
 
 #projects a {
     font-family: "HelveticaNow";
-    font-weight: bold;
+    /* font-weight: bold; */
     text-decoration: none;
     color: rgb(0, 0, 0);
     display: flex;

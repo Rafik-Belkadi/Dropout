@@ -22,7 +22,7 @@
 
 
 :root {
-    --main-bg-color: #e0e0e0;
+    --main-bg-color: #FFFFFF;
     --secondary-bg-color: #161616;
     --secondary-accent-color: #c92200;
     --secondary-txt-color: #FFFFFF;
@@ -645,7 +645,7 @@ h4 {
 
 #projects a {
     font-family: "HelveticaNow";
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 48px;
     text-decoration: none;
     color: var(--main-bg-color);
