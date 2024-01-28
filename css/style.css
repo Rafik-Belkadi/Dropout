@@ -244,7 +244,7 @@ a:active {
 
 .menu-item:hover {
     cursor: none;
-    transform: translate3d(0px, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    /* transform: translate3d(0px, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
     color: var(--dark-txt-color);
 
 }
